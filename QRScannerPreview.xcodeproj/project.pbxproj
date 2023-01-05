@@ -10,12 +10,13 @@
 		3B2A4EEC29660579005E8ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EEB29660579005E8ED6 /* AppDelegate.swift */; };
 		3B2A4EEE29660579005E8ED6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EED29660579005E8ED6 /* SceneDelegate.swift */; };
 		3B2A4EF029660579005E8ED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4EEF29660579005E8ED6 /* ViewController.swift */; };
-		3B2A4EF329660579005E8ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2A4EF129660579005E8ED6 /* Main.storyboard */; };
 		3B2A4EF52966057B005E8ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2A4EF42966057B005E8ED6 /* Assets.xcassets */; };
 		3B2A4EF82966057B005E8ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2A4EF62966057B005E8ED6 /* LaunchScreen.storyboard */; };
 		3B2A4F032966057B005E8ED6 /* QRScannerPreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4F022966057B005E8ED6 /* QRScannerPreviewTests.swift */; };
 		3B2A4F0D2966057B005E8ED6 /* QRScannerPreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4F0C2966057B005E8ED6 /* QRScannerPreviewUITests.swift */; };
 		3B2A4F0F2966057B005E8ED6 /* QRScannerPreviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4F0E2966057B005E8ED6 /* QRScannerPreviewUITestsLaunchTests.swift */; };
+		3B2A4F1C29662E67005E8ED6 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4F1B29662E67005E8ED6 /* QRScannerViewController.swift */; };
+		3B2A4F1E2966336C005E8ED6 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2A4F1D2966336C005E8ED6 /* QRScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		3B2A4EEB29660579005E8ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B2A4EED29660579005E8ED6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B2A4EEF29660579005E8ED6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B2A4EF229660579005E8ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B2A4EF42966057B005E8ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B2A4EF72966057B005E8ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B2A4EF92966057B005E8ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		3B2A4F082966057B005E8ED6 /* QRScannerPreviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRScannerPreviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2A4F0C2966057B005E8ED6 /* QRScannerPreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPreviewUITests.swift; sourceTree = "<group>"; };
 		3B2A4F0E2966057B005E8ED6 /* QRScannerPreviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerPreviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B2A4F1B29662E67005E8ED6 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		3B2A4F1D2966336C005E8ED6 /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +104,11 @@
 				3B2A4EEB29660579005E8ED6 /* AppDelegate.swift */,
 				3B2A4EED29660579005E8ED6 /* SceneDelegate.swift */,
 				3B2A4EEF29660579005E8ED6 /* ViewController.swift */,
-				3B2A4EF129660579005E8ED6 /* Main.storyboard */,
 				3B2A4EF42966057B005E8ED6 /* Assets.xcassets */,
 				3B2A4EF62966057B005E8ED6 /* LaunchScreen.storyboard */,
 				3B2A4EF92966057B005E8ED6 /* Info.plist */,
+				3B2A4F1B29662E67005E8ED6 /* QRScannerViewController.swift */,
+				3B2A4F1D2966336C005E8ED6 /* QRScanner.swift */,
 			);
 			path = QRScannerPreview;
 			sourceTree = "<group>";
@@ -233,7 +236,6 @@
 			files = (
 				3B2A4EF82966057B005E8ED6 /* LaunchScreen.storyboard in Resources */,
 				3B2A4EF52966057B005E8ED6 /* Assets.xcassets in Resources */,
-				3B2A4EF329660579005E8ED6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2A4F1C29662E67005E8ED6 /* QRScannerViewController.swift in Sources */,
 				3B2A4EF029660579005E8ED6 /* ViewController.swift in Sources */,
 				3B2A4EEC29660579005E8ED6 /* AppDelegate.swift in Sources */,
 				3B2A4EEE29660579005E8ED6 /* SceneDelegate.swift in Sources */,
+				3B2A4F1E2966336C005E8ED6 /* QRScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B2A4EF129660579005E8ED6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B2A4EF229660579005E8ED6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3B2A4EF62966057B005E8ED6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +438,9 @@
 				INFOPLIST_FILE = QRScannerPreview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +466,9 @@
 				INFOPLIST_FILE = QRScannerPreview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
