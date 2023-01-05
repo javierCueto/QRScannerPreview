@@ -28,21 +28,13 @@ class ViewController: UIViewController {
     
     
     @objc func callQR() {
-        
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .denied, .restricted:
-            let alert = UIAlertController(title: "Alert", message: "favor de dar permiso", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
-        case .authorized, .notDetermined:
+
             let scanner = QRScanner()
             let controller = QRScannerViewController(scanner: scanner, coordinator: self)
             scanner.delegate = controller
+//            let navigation = UINavigationController(rootViewController: controller)
             present(controller, animated: true)
-        @unknown default:
-            print("desconocido")
-        }
+
 
     }
 
@@ -50,15 +42,15 @@ class ViewController: UIViewController {
 
 extension ViewController: QRScannerViewControllerCoordinator {
     func didTappedCancelButton() {
-        print("was cancel")
+        print("take action when is cancelled")
     }
     
     func didLectureWasCompleted(valueScanned: String?, errorMessage: String?) {
         if let errorMessage = errorMessage {
-            print("error here", errorMessage)
-            let alert = UIAlertController(title: "Alert", message: "errorMessage", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Alert", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+
         }
         guard let valueScanned = valueScanned else { return }
         print(valueScanned)

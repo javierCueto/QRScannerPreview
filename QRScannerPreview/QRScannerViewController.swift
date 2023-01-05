@@ -100,11 +100,22 @@ final class QRScannerViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         scanner.viewDidDisappear()
-        print("was clossed")
     }
     
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if scanner.messageError != nil {
+            let alert = UIAlertController(title: "Alert", message: scanner.messageError , preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: {_ in
+                self.dismiss(animated: true)
+                self.coordinator?.didTappedCancelButton()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scanner.setSpecificAreaToReadQR(frame: borderImageView.frame)

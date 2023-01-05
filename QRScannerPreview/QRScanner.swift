@@ -16,10 +16,21 @@ final class QRScanner: NSObject {
     private var captureSession: AVCaptureSession?
     private var captureVideoPreviewLayer: AVCaptureVideoPreviewLayer?
     private var metadataOutput: AVCaptureMetadataOutput?
+     var messageError: String?
     weak var delegate: QRScannerDelegate?
     
     func config() {
-        checkCameraPermission()
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .denied, .restricted:
+            messageError = "Se requiere permisos de la camara"
+            
+        case .authorized, .notDetermined:
+        
+            checkCameraPermission()
+        @unknown default:
+            messageError = "Error desconocido para el permiso de camara"
+        }
+
         
         
     }
@@ -34,7 +45,7 @@ final class QRScanner: NSObject {
         guard let captureSession = captureSession else { return }
         
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
-            delegate?.didScannerCompleted(valueScanned: nil, errorMessage: "Device not supported")
+            messageError = "Device not supported"
             return
         }
         
@@ -42,14 +53,14 @@ final class QRScanner: NSObject {
         do {
             captureDeviceInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
-            delegate?.didScannerCompleted(valueScanned: nil, errorMessage: "Error capturing device")
+            messageError = "Error capturing device"
             return
         }
         
         if (captureSession.canAddInput(captureDeviceInput)) {
             captureSession.addInput(captureDeviceInput)
         } else {
-            delegate?.didScannerCompleted(valueScanned: nil, errorMessage: "Imposible to capture in the device")
+            messageError = "Imposible to capture in the device"
             return
         }
         
@@ -62,7 +73,7 @@ final class QRScanner: NSObject {
             metadataOutput.metadataObjectTypes = [.qr]
             
         } else {
-            delegate?.didScannerCompleted(valueScanned: nil, errorMessage: "Imposible to capture in the device")
+            messageError = "Imposible to capture in the device"
             return
         }
         captureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
